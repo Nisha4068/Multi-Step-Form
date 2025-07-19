@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-step Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="steps">
+        <div class="step active"><div class="circle">1</div><div class="step-text"><p>STEP 1</p><h4>YOUR INFO</h4></div></div>
+        <div class="step"><div class="circle">2</div><div class="step-text"><p>STEP 2</p><h4>SELECT PLAN</h4></div></div>
+        <div class="step"><div class="circle">3</div><div class="step-text"><p>STEP 3</p><h4>ADD-ONS</h4></div></div>
+        <div class="step"><div class="circle">4</div><div class="step-text"><p>STEP 4</p><h4>SUMMARY</h4></div></div>
+      </div>
+      <div class="sidebar-art"></div>
+    </div>
+
+    <div class="form-container">
+      <form id="multi-step-form">
+        <!-- STEP 1 -->
+        <div class="form-step active">
+          <h2>Personal info</h2>
+          <p>Please provide your name, email address, and phone number.</p>
+          <label>Name</label>
+          <input type="text" placeholder="e.g. Stephen King" required />
+          <label>Email Address</label>
+          <input type="email" placeholder="e.g. stephenking@lorem.com" required />
+          <label>Phone Number</label>
+          <input type="tel" placeholder="e.g. +1 234 567 890" required />
+          <div class="form-navigation">
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="form-step">
+          <h2>Select Plan</h2>
+          <p>Choose your subscription plan.</p>
+          <label><input type="radio" name="plan" value="Basic" /> Basic - $10/mo</label><br/>
+          <label><input type="radio" name="plan" value="Standard" /> Standard - $20/mo</label><br/>
+          <label><input type="radio" name="plan" value="Premium" /> Premium - $30/mo</label>
+          <div class="form-navigation">
+            <button type="button" class="back-btn">Go Back</button>
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="form-step">
+          <h2>Add-ons</h2>
+          <p>Choose additional services.</p>
+          <label><input type="checkbox" name="addon" value="Cloud Backup" /> Cloud Backup - $2/mo</label><br/>
+          <label><input type="checkbox" name="addon" value="Priority Support" /> Priority Support - $3/mo</label><br/>
+          <label><input type="checkbox" name="addon" value="Custom Reports" /> Custom Reports - $5/mo</label>
+          <div class="form-navigation">
+            <button type="button" class="back-btn">Go Back</button>
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="form-step">
+          <h2>Summary</h2>
+          <p>Review your selections.</p>
+          <div id="summary"></div>
+          <div class="form-navigation">
+            <button type="button" class="back-btn">Go Back</button>
+            <button type="submit" class="next-btn">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
